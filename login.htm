@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class='logo'><img src="images/logo.png" alt=""></div>
+<h4 class="title">虚拟焊接网络教学系统</h4>
+<form action="" id="loginForm">
+    <div class="box"><span></span><input type="text" class="user" placeholder="请输入用户名" value=""></div>
+    <div class="info">输入错误</div>
+    <div class="box"><span></span><input type="password" class="password" placeholder="请输入密码" value=""></div>
+    <div class="info">输入错误</div>
+    <div class="clf operating">
+        <label for="rPassword"><input type="checkbox" name="rpassword" id="rPassword">记住密码</label>
+        <a href="find_password.html">忘记密码？</a>
+    </div>
+    <!--disabled="disabled"-->
+    <input type="button" value="登录" class="submit" >
+</form>
+<div class="copyright">深圳市为汉科技有限公司版权所有</div>
+
+
+<script>
+    var form = document.getElementById('loginForm');
+    var user = form.children[0].children[1];
+    var password = form.children[1].children[1];
+    var btn = form.children[3];
+
+    if(user.value != null && password.value != null){
+        btn.disabled = false;
+        btn.style.backgroundColor = '#37a4df';
+    }
+    btn.onclick = function () {
+        console.log(user.value);
+    }
+
+</script>
+</body>
+</html>
